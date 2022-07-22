@@ -59,4 +59,117 @@ var num4 = 42
  * }
  */
 
+//--------------------------------------------------------------------------------------------------------------------//
+// Section 3: Functions
+//--------------------------------------------------------------------------------------------------------------------//
+
+// Default Methods with Parameter(s)
+/**
+ * fun (name: String)
+ * First, the name of the variable. Then, the data type.
+ */
+
+// Returning Methods
+/**
+ * fun (name: String) String
+ * Function that returns a String
+ */
+
+// Anonymous Methods
+/**
+ * val f: (Int, Int) -> Int = { a, b -> a+b }
+ * Anonymous function that takes 'a' and 'b' as method parameters (Integers) and returns its sum as an Integer
+ */
+
+// For-Each Iteration
+/**
+ * var arr = arrayOf(3, 5, 7, 9)
+ * var x = 0
+ * arr.forEach {
+ * x += it-1
+ * }
+ * println(x)
+ * For-Each iteration
+ * Output: 20
+ */
+
+// Higher-Order Methods
+/**
+ * fun apply(x:Int, action: (Int) -> Int): Int {
+ * return action(x)
+ * }
+ * Higher-order functions take another functions as method argument
+ */
+
+// Filter Method
+/**
+ * arr.filter({it%2 == 0})
+ * Filter is a higher order function. In this example the filter filters all even numbers
+ */
+
+//--------------------------------------------------------------------------------------------------------------------//
+// Section 4: OOP
+//--------------------------------------------------------------------------------------------------------------------//
+
+// Constructors via keyword
+/**
+ * class User {
+ * var name = ""
+ * var age = 0
+ *
+ * constructor (nm: String) {
+ * name = nm
+ * }
+ *
+ * constructor (nm: String, ag: Int) {
+ * name = nm
+ * age = ag
+ * }
+ * }
+ * Multiple constructors via 'constructor' keyword
+ */
+
+// Getters & Setters
+/**
+ * class User {
+ * var name = ""
+ *
+ * var age = 0
+ * get() = field
+ *
+ * set(value) {
+ * field = value
+ * }
+ *
+ * The get() function defines how the age value is accessed. It simply returns the current value using the field keyword.
+ * The set() function sets the provided value using the value keyword.
+ */
+
+// Class Functions
+/**
+ * class User(var name: String, var age: Int) {
+ * fun login() {
+ * println("Login from user " + name)
+ * }
+ * }
+ *
+ * fun main(args: Array<String>) {
+ * var u = User("James", 42)
+ * u.login()
+ * }
+ * Classes can have function parameters
+ */
+
+// Inheritance
+/**
+ * open class User(var name: String, var age: Int) {
+ * }
+ *
+ * class Admin(name: String, age: Int): User(name, age) {
+ * }
+ *
+ * class Moderator(name: String, age: Int): User(name, age) {
+ * }
+ * Both types of users (Admins and moderators) have a name and an age, so they inherit those properties from the user class
+ */
 
