@@ -173,3 +173,9 @@ var num4 = 42
  * Both types of users (Admins and moderators) have a name and an age, so they inherit those properties from the user class
  */
 
+// Abstract Functions
+/**
+ * override fun do() {
+ * }
+ */
+
